@@ -9,17 +9,16 @@ RUN yum -y install --nogpgcheck  yum-utils \
 	perl-Data-Dumper \
 	sysvinit-tools \
 	unzip \
-	wget 
+	wget
 
 # Download software
-cd /tmp
-wget http://danielino.ddns.net/repos/mysql/server/mysql-server-enterprise.zip
-unzip mysql-server-enterprise
+RUN wget http://danielino.ddns.net/repos/mysql/server/mysql-server-enterprise.zip
+RUN unzip mysql-server-enterprise
 
 
 # Install database rpm's
 
-rpm -ivh mysql-commercial-libs-* \
+RUN rpm -ivh mysql-commercial-libs-* \
 		mysql-commercial-common-5.7.12-1.1.el7.x86_64.rpm \
 		mysql-commercial-client-5.7.12-1.1.el7.x86_64.rpm \
 		mysql-commercial-server-5.7.12-1.1.el7.x86_64.rpm
