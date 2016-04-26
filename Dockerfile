@@ -10,7 +10,8 @@ RUN yum -y install --nogpgcheck  yum-utils \
 	sysvinit-tools \
 	unzip \
 	wget \
-	libaio
+	libaio \
+	net-tools
 
 # Download software
 RUN wget http://danielino.ddns.net/repos/mysql/server/mysql-server-enterprise.zip
