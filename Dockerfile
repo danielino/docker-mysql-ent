@@ -9,7 +9,7 @@ RUN yum -y install --nogpgcheck  yum-utils \
 	perl-Data-Dumper \
 	sysvinit-tools \
 	unzip \
-	wget \
+	wget 
 
 # Download software
 cd /tmp
