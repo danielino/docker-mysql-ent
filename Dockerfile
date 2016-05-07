@@ -16,15 +16,21 @@ RUN yum -y install --nogpgcheck  yum-utils \
 
 # Download software
 RUN wget http://www.par-tec.it/RPMS/mysql-server-enterprise.zip
-RUN unzip mysql-server-enterprise
-
+RUN wget http://danielino.ddns.net/repos/mysql/mysql-utilities.zip
+RUN wget http://danielino.ddns.net/repos/mysql/mysql-connector-python-commercial.zip
+RUN unzip mysql-server-enterprise.zip
+RUN unzip mysql-connector-python-commercial.zip
+RUN unzip MySQL-utilities.zip
 
 # Install database rpm's
 
-RUN rpm -ivh mysql-commercial-libs-* \
+RUN rpm -ivh mysql-commercial-libs-*.rpm \
 		mysql-commercial-common-5.7.12-1.1.el7.x86_64.rpm \
 		mysql-commercial-client-5.7.12-1.1.el7.x86_64.rpm \
-		mysql-commercial-server-5.7.12-1.1.el7.x86_64.rpm
+		mysql-commercial-server-5.7.12-1.1.el7.x86_64.rpm \
+		mysql-connector-python-commercial-*.rpm \
+		mysql-utilities-commercial-*.rpm
+		
 
 
 # Remove all packages from image
