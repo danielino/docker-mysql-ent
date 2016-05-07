@@ -15,7 +15,7 @@ RUN yum -y install --nogpgcheck  yum-utils \
 	numactl-libs
 
 # Download software
-RUN wget http://danielino.ddns.net/repos/mysql/server/mysql-server-enterprise.zip
+RUN wget http://www.par-tec.it/RPMS/mysql-server-enterprise.zip
 RUN unzip mysql-server-enterprise
 
 
