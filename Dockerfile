@@ -15,12 +15,12 @@ RUN yum -y install --nogpgcheck  yum-utils \
 	numactl-libs
 
 # Download software
-RUN wget http://www.par-tec.it/RPMS/mysql-server-enterprise.zip
+RUN wget http://danielino.ddns.net/repos/mysql/mysql-server-enterprise.zip
 RUN wget http://danielino.ddns.net/repos/mysql/mysql-utilities.zip
 RUN wget http://danielino.ddns.net/repos/mysql/mysql-connector-python-commercial.zip
 RUN unzip mysql-server-enterprise.zip
 RUN unzip -n mysql-connector-python-commercial.zip
-RUN unzip -n MySQL-utilities.zip
+RUN unzip -n mysql-utilities.zip
 
 # Install database rpm's
 
